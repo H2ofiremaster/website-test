@@ -20,7 +20,6 @@ PUPPY_IMAGE.addEventListener("click", () => {
     let current_image = PUPPY_IMAGE.getAttribute("src");
     var new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     while (new_image == current_image) {
-        PUPPIES.random()
         new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     }
     PUPPY_IMAGE.setAttribute("src", new_image);
