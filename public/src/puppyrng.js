@@ -24,6 +24,6 @@ PUPPY_IMAGE.addEventListener("click", () => {
         new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     }
     PUPPY_IMAGE.setAttribute("src", new_image);
-    BARK.playbackRate = 0.9 = (Math.random() * 0.2);
+    BARK.playbackRate = 0.9 + (Math.random() * 0.2);
     BARK.play();
 })

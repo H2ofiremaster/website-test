@@ -7,5 +7,5 @@ body {
 }
 #puppy-image {
     justify-self: center;
-    cursor: url("../assets/paw.cur");
+    cursor: url("../assets/paw.cur"), pointer;
 }
