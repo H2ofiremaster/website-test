@@ -1,0 +1,7 @@
+body {
+    background-color: gray;
+}
+.heading {
+    display: flex;
+    justify-content: center;
+}
