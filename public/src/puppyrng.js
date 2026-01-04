@@ -1,5 +1,5 @@
 const PUPPIES = [
-    "https://imgur.com/two-puppies-wearing-top-hats-40nPh",
+    "https://i.imgur.com/40nPh.jpeg",
     "https://images.puppies.com/processed/fba5b9b3-2513-44a0-a61c-09e4aa67de80/listing/a0ad617a-1e67-4c9f-8e71-7d89f87db8fe/76d8573b-4a3a-4fde-9ad6-99fbf791d352-opt.webp",
     "https://preview.redd.it/adopted-this-little-dude-today-needs-a-name-12-weeks-old-v0-vyl964z4xabg1.jpg?width=1080&crop=smart&auto=webp&s=f242397a4182485ce4a76ac13b1a590d707a6e4b",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/250px-Golde33443.jpg",
@@ -24,5 +24,6 @@ PUPPY_IMAGE.addEventListener("click", () => {
         new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     }
     PUPPY_IMAGE.setAttribute("src", new_image);
+    BARK.playbackRate = 0.9 = (Math.random() * 0.2);
     BARK.play();
 })

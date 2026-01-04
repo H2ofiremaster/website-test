@@ -5,3 +5,7 @@ body {
     display: flex;
     justify-content: center;
 }
+#puppy-image {
+    justify-self: center;
+    cursor: url("../assets/paw.cur");
+}
