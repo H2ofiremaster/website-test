@@ -15,7 +15,10 @@ const PUPPIES = [
 ];
 
 const PUPPY_IMAGE = document.getElementById("puppy-image");
-const BARK = new Audio("../assets/dog-bark.mp3");
+const ARF_NODE = document.createElement("div");
+ARF_NODE.textContent = "Arf!";
+ARF_NODE.className = "arf";
+ARF_NODE.style.position = "absolute";
 PUPPY_IMAGE.addEventListener("click", () => {
     let current_image = PUPPY_IMAGE.getAttribute("src");
     var new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
@@ -23,6 +26,21 @@ PUPPY_IMAGE.addEventListener("click", () => {
         new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     }
     PUPPY_IMAGE.setAttribute("src", new_image);
+    
+    const BARK = new Audio("../assets/dog-bark.mp3");
     BARK.playbackRate = 0.9 + (Math.random() * 0.2);
     BARK.play();
+
+    var positionX = Math.random() * -100;
+    var positionY = Math.random() * -100;
+    var rotation = Math.random() * 120 - 60;
+    var scale = Math.random * 2 - 1;
+
+    var arf = ARF_NODE.cloneNode();
+    arf.style.transform = `
+        translate(${positionX}%, ${positionY}%)
+        rotate(${rotation}deg)
+        scale(${scale})
+    `;
+    document.body.appendChild(arf);
 })
