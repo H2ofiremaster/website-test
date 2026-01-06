@@ -30,8 +30,8 @@ PUPPY_IMAGE.addEventListener("click", () => {
     var positionX = Math.random() * -100;
     var positionY = Math.random() * -100;
     var rotation = Math.random() * 120 - 60;
-    var scale = Math.random() * 2 - 1;
-
+    var scale = Math.random() * 2;
+    var color = [Math.random() * 128 + 128, Math.random() * 128 + 128 , Math.random() * 128 + 128]
     var arf = document.createElement("p");
     arf.textContent = "Arf!";
     arf.className = "arf";
@@ -39,6 +39,7 @@ PUPPY_IMAGE.addEventListener("click", () => {
     arf.style.left = "200px";
     arf.style.top = "150px";
     arf.style.fontSize = "32px";
+    arf.style.color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
     arf.style.transform = `
         translate(${positionX}%, ${positionY}%)
         rotate(${rotation}deg)
