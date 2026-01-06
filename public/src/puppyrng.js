@@ -15,12 +15,6 @@ const PUPPIES = [
 ];
 
 const PUPPY_IMAGE = document.getElementById("puppy-image");
-const ARF_NODE = document.createTextNode("Arf!");
-ARF_NODE.className = "arf";
-ARF_NODE.style.position = "absolute";
-ARF_NODE.style.left = "200px";
-ARF_NODE.style.top = "150px";
-ARF_NODE.style.fontSize = "32px";
 PUPPY_IMAGE.addEventListener("click", () => {
     let current_image = PUPPY_IMAGE.getAttribute("src");
     var new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
@@ -38,7 +32,13 @@ PUPPY_IMAGE.addEventListener("click", () => {
     var rotation = Math.random() * 120 - 60;
     var scale = Math.random * 2 - 1;
 
-    var arf = ARF_NODE.cloneNode();
+    var arf = document.createElement("p");
+    arf.textContent = "Arf!";
+    arf.className = "arf";
+    arf.style.position = "absolute";
+    arf.style.left = "200px";
+    arf.style.top = "150px";
+    arf.style.fontSize = "32px";
     arf.style.transform = `
         translate(${positionX}%, ${positionY}%)
         rotate(${rotation}deg)
