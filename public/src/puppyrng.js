@@ -30,7 +30,7 @@ PUPPY_IMAGE.addEventListener("click", () => {
     var positionX = Math.random() * -100;
     var positionY = Math.random() * -100;
     var rotation = Math.random() * 120 - 60;
-    var scale = Math.random * 2 - 1;
+    var scale = Math.random() * 2 - 1;
 
     var arf = document.createElement("p");
     arf.textContent = "Arf!";
