@@ -15,8 +15,7 @@ const PUPPIES = [
 ];
 
 const PUPPY_IMAGE = document.getElementById("puppy-image");
-const ARF_NODE = document.createElement("p");
-ARF_NODE.textContent = "Arf!";
+const ARF_NODE = document.createTextNode("Arf!");
 ARF_NODE.className = "arf";
 ARF_NODE.style.position = "absolute";
 ARF_NODE.style.left = "200px";
