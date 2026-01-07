@@ -15,7 +15,6 @@ const PUPPIES = [
 ];
 
 const PUPPY_IMAGE = document.getElementById("puppy-image");
-const BARK = new Audio("../assets/dog-bark.mp3");
 PUPPY_IMAGE.addEventListener("click", () => {
     let current_image = PUPPY_IMAGE.getAttribute("src");
     var new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
@@ -23,6 +22,28 @@ PUPPY_IMAGE.addEventListener("click", () => {
         new_image = PUPPIES[Math.floor((Math.random() * PUPPIES.length))];
     }
     PUPPY_IMAGE.setAttribute("src", new_image);
-    BARK.playbackRate = 0.9 + (Math.random() * 0.2);
+    
+    const BARK = new Audio("../assets/dog-bark.mp3");
+    BARK.preservesPitch = false;
+    BARK.playbackRate = 0.8 + (Math.random() * 0.4);
     BARK.play();
+
+    const PADDING = 100;
+    var positionX = Math.random() * (window.innerWidth - PADDING) - ((window.innerWidth - PADDING) / 2);
+    var positionY = Math.random() * (window.innerHeight - PADDING);
+    var rotation = Math.random() * 120 - 60;
+    var scale = Math.random() * 2;
+    var color = [Math.random() * 128 + 128, Math.random() * 128 + 128 , Math.random() * 128 + 128]
+    var arf = document.createElement("p");
+    arf.textContent = "Arf!";
+    arf.className = "arf";
+    arf.style.position = "absolute";
+    arf.style.fontSize = "32px";
+    arf.style.color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+    arf.style.transform = `
+        translate(${positionX}px, ${positionY}px)
+        rotate(${rotation}deg)
+        scale(${scale})
+    `;
+    document.body.appendChild(arf);
 })
