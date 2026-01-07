@@ -27,8 +27,9 @@ PUPPY_IMAGE.addEventListener("click", () => {
     BARK.playbackRate = 0.9 + (Math.random() * 0.2);
     BARK.play();
 
-    var positionX = Math.random() * window.innerWidth - (window.innerWidth / 2);
-    var positionY = Math.random() * window.innerHeight;
+    const PADDING = 100;
+    var positionX = Math.random() * (window.innerWidth - PADDING) - ((window.innerWidth - PADDING) / 2);
+    var positionY = Math.random() * (window.innerHeight - PADDING);
     var rotation = Math.random() * 120 - 60;
     var scale = Math.random() * 2;
     var color = [Math.random() * 128 + 128, Math.random() * 128 + 128 , Math.random() * 128 + 128]
