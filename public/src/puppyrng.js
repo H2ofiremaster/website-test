@@ -24,7 +24,7 @@ PUPPY_IMAGE.addEventListener("click", () => {
     PUPPY_IMAGE.setAttribute("src", new_image);
     
     const BARK = new Audio("../assets/dog-bark.mp3");
-    BARK.playbackRate = 0.9 + (Math.random() * 0.2);
+    BARK.playbackRate = 0 + (Math.random() * 2);
     BARK.play();
 
     const PADDING = 100;
