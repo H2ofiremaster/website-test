@@ -4,6 +4,11 @@ body {
     align-items: center;
     background-color: rgb(15, 15, 15);
 }
+.ui {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
 .heading {
     justify-content: center;
     margin-bottom: 3em;
